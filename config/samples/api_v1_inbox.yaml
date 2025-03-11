@@ -1,0 +1,9 @@
+apiVersion: api.kubeinbox.com/v1
+kind: Inbox
+metadata:
+  labels:
+    app.kubernetes.io/name: inbox-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: inbox-sample
+spec:
+  inboxType: text

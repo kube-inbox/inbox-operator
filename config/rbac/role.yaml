@@ -1,0 +1,32 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: manager-role
+rules:
+- apiGroups:
+  - api.kubeinbox.com
+  resources:
+  - inboxes
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - api.kubeinbox.com
+  resources:
+  - inboxes/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - api.kubeinbox.com
+  resources:
+  - inboxes/status
+  verbs:
+  - get
+  - patch
+  - update
